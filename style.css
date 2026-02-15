@@ -1,0 +1,1162 @@
+* {
+    box-sizing: border-box;
+    }
+    
+    body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    font-size: 14px;
+    color: #28292f;
+    }
+    
+    @media (max-width: 693px) {
+    body {
+        margin-top: 60px;
+        /* Kho%u1EA3ng cch ph h%u1EE3p v%u1EDBi chi%u1EC1u cao c%u1EE7a header */
+        margin-bottom: 60px;
+        /* Kho%u1EA3ng cch ph h%u1EE3p v%u1EDBi chi%u1EC1u cao c%u1EE7a thanh thanh ton */
+    }
+    }
+    
+    a {
+    text-decoration: none;
+    }
+    
+    header {
+    background-color: #ffffff;
+    z-index: 1000;
+    /* %u0110%u1EA3m b%u1EA3o header n%u1EB1m trn cc ph%u1EA7n t%u1EED khc */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Thm bng %u0111%u1EC3 t%u1EA1o hi%u1EC7u %u1EE9ng n%u1ED5i */
+    }
+    
+    /* Ch%u1EC9 c%u1ED1 %u0111%u1ECBnh header khi mn hnh 639px tr%u1EDF xu%u1ED1ng */
+    @media (max-width: 639px) {
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+    }
+    
+    header .header-container {
+    max-width: 1040px;
+    padding: 15px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    }
+    
+    header .header-container .logo {
+    padding: 0px;
+    }
+    
+    header .header-container .logo img {
+    height: 25px;
+    }
+    
+    header .header-container .divider {
+    width: 1px;
+    height: 16px;
+    background-color: #cccccc;
+    margin: 0 10px;
+    }
+    
+    header .header-container .text {
+    font-weight: 500;
+    font-size: 18px;
+    }
+    
+    .banner {
+    background-color: #151515;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    /* %u0110%u1EA3m b%u1EA3o banner chi%u1EBFm ton b%u1ED9 chi%u1EC1u ngang */
+    }
+    
+    .banner .img-banner {
+    width: 100%;
+    /* Chi%u1EBFm ton b%u1ED9 chi%u1EC1u ngang */
+    max-width: 100%;
+    }
+    
+    .banner .img-banner img {
+    width: 100%;
+    /* Hnh %u1EA3nh chi%u1EBFm ton b%u1ED9 chi%u1EC1u ngang */
+    height: auto;
+    /* Gi%u1EEF t%u1EF7 l%u1EC7 khung hnh */
+    margin-bottom: -4px;
+    }
+    
+    @media (max-width: 767px) {
+    .banner {
+        margin-bottom: -4px;
+        /* %u0110i%u1EC1u ch%u1EC9nh kho%u1EA3ng cch */
+    }
+    
+    .banner .img-banner img {
+        border-radius: 0px;
+        /* Lo%u1EA1i b%u1ECF bo trn trn mn hnh nh%u1ECF */
+    }
+    }
+    
+    .game-selection {
+    background-image: url('../cdn-gop.garenanow.com/gop/mshop/www/live/assets/pattern-game-selection-59889447.png');
+    background-position: center;
+    /* C%u0103n gi%u1EEFa theo chi%u1EC1u ngang */
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    /* Ko dn theo chi%u1EC1u d%u1ECDc v c%u0103n ton b%u1ED9 */
+    background-color: #efefef;
+    position: relative;
+    }
+    
+    .duong-ke-vang {
+    background-image: url('css/img/ke_vang_dai.svg');
+    height: 27px;
+    width: 100%;
+    /* Width c%u1EE7a %u0111%u01B0%u1EDDng k%u1EBB */
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+    }
+    
+    .game-selection-container {
+    max-width: 999px;
+    margin: 0 auto;
+    margin-top: -25px;
+    padding: 10px;
+    }
+    
+    .title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #28292f;
+    margin-bottom: 20px;
+    }
+    
+    .list-game {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    /* T%u1EF1 %u0111%u1ED9ng %u0111i%u1EC1u ch%u1EC9nh s%u1ED1 c%u1ED9t */
+    width: 100%;
+    /* %u0110%u1EA3m b%u1EA3o list-game chi%u1EBFm ton b%u1ED9 chi%u1EC1u r%u1ED9ng */
+    box-sizing: border-box;
+    /* %u0110%u1EA3m b%u1EA3o padding v border khng gy trn */
+    padding-bottom: 15px;
+    }
+    
+    @media (min-width: 1024px) {
+    .list-game {
+        grid-template-columns: repeat(8, minmax(80px, 1fr));
+    }
+    
+    .container {
+        border-radius: 0px;
+    }
+    }
+    
+    @media (min-width: 640px) and (max-width: 1023px) {
+    .list-game {
+        grid-template-columns: repeat(6, minmax(80px, 1fr));
+    }
+    }
+    
+    @media (max-width: 639px) {
+    .list-game {
+        grid-template-columns: repeat(4, minmax(80px, 1fr));
+    }
+    }
+    
+    .game-item {
+    font-size: 14px;
+    color: #28292f;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    /* %u0110%u1EB7t cc ph%u1EA7n t%u1EED theo chi%u1EC1u d%u1ECDc */
+    align-items: center;
+    /* C%u0103n gi%u1EEFa n%u1ED9i dung theo chi%u1EC1u ngang */
+    text-align: center;
+    box-sizing: border-box;
+    /* %u0110%u1EA3m b%u1EA3o padding v border khng gy trn */
+    }
+    
+    .game-item .game-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+    background-color: #fff;
+    }
+    
+    .game-item .game-img img {
+    width: 100%;
+    }
+    
+    .game-item .game-name {
+    margin-top: 8px;
+    width: 100%;
+    font-weight: 500;
+    }
+    
+    .list-game-container {
+    position: relative;
+    overflow: hidden;
+    height: 160px;
+    /* Chi%u1EC1u cao ban %u0111%u1EA7u %u0111%u1EC3 hi%u1EC3n th%u1ECB 1.5 hng */
+    transition: height 0.3s ease;
+    }
+    
+    .fade-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    /* Chi%u1EC1u cao c%u1EE7a hi%u1EC7u %u1EE9ng m%u1EDD */
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(239, 239, 239, 1));
+    /* Hi%u1EC7u %u1EE9ng gradient m%u1EDD */
+    pointer-events: none;
+    }
+    
+    #viewMoreBtn {
+    display: block;
+    margin: 15px auto 5px auto;
+    padding: 8px 10px;
+    font-size: 12px;
+    color: #D81A0D;
+    border: 1px solid #D81A0D;
+    font-weight: 500;
+    border-radius: 20px;
+    cursor: pointer;
+    }
+    
+    #viewMoreBtn:hover {
+    color: #fff;
+    border: 1px solid #fff;
+    background: #D81A0D;
+    }
+    
+    #viewMoreBtn i {
+    margin-left: 5px;
+    }
+    
+    
+    .container {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 10px;
+    }
+    
+    .game-banner {
+    display: flex;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    color: white;
+    width: 100%;
+    max-width: 980px;
+    height: auto;
+    box-sizing: border-box;
+    position: relative;
+    }
+    
+    .game-info {
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* N%u1EC1n %u0111en m%u1EDD cho ph%u1EA7n thng tin */
+    padding: 10px;
+    border-radius: 10px;
+    }
+    
+    .game-icon {
+    width: 65px;
+    height: 65px;
+    border-radius: 8px;
+    margin-right: 15px;
+    }
+    
+    .game-details {
+    display: flex;
+    flex-direction: column;
+    }
+    
+    .game-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 0;
+    }
+    
+    .game-badge {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    font-size: 14px;
+    }
+    
+    .badge-icon {
+    margin-right: 5px;
+    }
+    
+    .badge-container {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    }
+    
+    .badge-number {
+    background-image: url('css/img/nhan.svg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    /* Mu c%u1EE7a s%u1ED1 */
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border-radius: 4px;
+    margin-right: 8px;
+    /* Kho%u1EA3ng cch gi%u1EEFa SVG v ch%u1EEF "Login" */
+    font-size: 14px;
+    }
+    
+    .label-text {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    }
+    
+    
+    /* Container chnh cho ph%u1EA7n %u0111%u0103ng nh%u1EADp */
+    .login-container {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    }
+    
+    .login-container .login-form {
+    width: calc(50% - 10px);
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .login-container .gift {
+    width: calc(50% - 10px);
+    background-color: #fff8e1;
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 223, 0, 0.6);
+    font-size: 16px;
+    font-style: italic;
+    padding: 0;
+    }
+    
+    .container .gift .bg {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 0;
+    }
+    
+    .container .gift .bg .simple-text {
+    color: #fff7f7;
+    }
+    
+    .container .gift .bg strong {
+    color: rgb(147, 255, 58);
+    }
+    
+    /* Ch%u1EEF %u0111%u1EB7c bi%u1EC7t "TelAnnas Th%u1EE9 Nguyn v%u1EC7 th%u1EA7n" */
+    .login-container .gift .highlight-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(255, 225, 0);
+    }
+    
+    @media (max-width: 639px) {
+    .login-container {
+        flex-direction: column;
+    }
+    
+    .login-container .login-form,
+    .login-container .gift {
+        min-width: 100%;
+    }
+    }
+    
+    
+    
+    /* Form label */
+    .form-label {
+    font-size: 14px;
+    color: #666;
+    display: block;
+    margin-bottom: 8px;
+    }
+    
+    .form-label i {
+    margin-left: 5px;
+    }
+    
+    .paste-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 11px 8px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-left: none;
+    height: 100%;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 0;
+    }
+    
+    .form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    }
+    
+    .input-group {
+    position: relative;
+    flex-grow: 1;
+    /* Cho php .input-group m%u1EDF r%u1ED9ng */
+    margin-right: 10px;
+    /* Kho%u1EA3ng cch gi%u1EEFa .input-group v .login-button */
+    }
+    
+    .input-field {
+    width: 100%;
+    /* %u0110%u1EA3m b%u1EA3o input chi%u1EBFm ton b%u1ED9 khng gian .input-group */
+    padding: 10px 40px 10px 10px;
+    /* Thm kho%u1EA3ng tr%u1ED1ng bn ph%u1EA3i cho bi%u1EC3u t%u01B0%u1EE3ng dn */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    }
+    
+    .form-label {
+    display: flex;
+    justify-content: space-between;
+    }
+    
+    .form-label .title-login {
+    font-weight: 600;
+    }
+    
+    .paste-icon {
+    position: absolute;
+    right: 10px;
+    /* %u0110i%u1EC1u ch%u1EC9nh kho%u1EA3ng cch so v%u1EDBi bn ph%u1EA3i */
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #d9534f;
+    cursor: pointer;
+    background-color: transparent;
+    padding: 0;
+    border: none;
+    }
+    
+    .login-button {
+    padding: 12px 10px;
+    background-color: #D81A0D;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    text-wrap: nowrap;
+    }
+    
+    .user-info {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    }
+    
+    .logout-link {
+    margin-left: auto;
+    /* %u0110%u1EA9y logout icon v%u1EC1 bn ph%u1EA3i */
+    font-size: 18px;
+    }
+    
+    .logout-link a {
+    color: red;
+    text-decoration: none;
+    }
+    
+    .logout-link a:hover {
+    color: #e74c3c;
+    /* Mu khi hover */
+    }
+    
+    .avatar {
+    flex-shrink: 0;
+    margin-right: 10px;
+    }
+    
+    .avatar-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    }
+    
+    .user-details {
+    display: flex;
+    flex-direction: column;
+    }
+    
+    .user-id {
+    font-weight: bold;
+    }
+    
+    .user-location {
+    color: #888;
+    }
+    
+    .tb-nonlogin {
+    color: red;
+    display: none;
+    }
+    
+    
+    /* Container ch%u1EE9a cc item currency */
+    .list-currency {
+    margin-top: 10px;
+    display: grid;
+    gap: 10px;
+    /* Kho%u1EA3ng cch gi%u1EEFa cc item */
+    }
+    
+    /* %u0110%u1ECBnh d%u1EA1ng m%u1EB7c %u0111%u1ECBnh cho t%u1EEBng item currency */
+    .currency-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 5px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-align: center;
+    color: #333;
+    font-size: 16px;
+    cursor: pointer;
+    }
+    
+    /* Ph%u1EA7n trn cng v%u1EDBi bi%u1EC3u t%u01B0%u1EE3ng currency v s%u1ED1 l%u01B0%u1EE3ng trn cng m%u1ED9t hng */
+    .currency-top {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4px;
+    justify-content: center;
+    }
+    
+    /* %u0110%u1ECBnh d%u1EA1ng bi%u1EC3u t%u01B0%u1EE3ng currency */
+    .currency-icon {
+    width: 18px;
+    height: 18px;
+    }
+    
+    /* %u0110%u1ECBnh d%u1EA1ng s%u1ED1 l%u01B0%u1EE3ng currency */
+    .currency-amount {
+    font-weight: bold;
+    font-size: 18px;
+    }
+    
+    /* %u0110%u1ECBnh d%u1EA1ng gi ti%u1EC1n cho m%u1ED7i s%u1ED1 l%u01B0%u1EE3ng currency */
+    .currency-price {
+    font-size: 14px;
+    color: #666;
+    }
+    
+    .currency-warning {
+    margin-top: 5px;
+    color: red;
+    font-style: italic;
+    }
+    
+    /* B%u1ED1 c%u1EE5c responsive cho cc kch th%u01B0%u1EDBc mn hnh khc nhau */
+    @media (min-width: 768px) {
+    .list-currency {
+        grid-template-columns: repeat(6, 1fr);
+        /* 6 item trn m%u1ED9t hng khi mn hnh t%u1EEB 768px tr%u1EDF ln */
+    }
+    }
+    
+    @media (min-width: 640px) and (max-width: 767px) {
+    .list-currency {
+        grid-template-columns: repeat(4, 1fr);
+        /* 4 item trn m%u1ED9t hng khi mn hnh t%u1EEB 640px %u0111%u1EBFn 767px */
+    }
+    }
+    
+    @media (max-width: 639px) {
+    .list-currency {
+        grid-template-columns: repeat(3, 1fr);
+        /* 3 item trn m%u1ED9t hng khi mn hnh d%u01B0%u1EDBi 640px */
+    }
+    }
+    
+    
+    
+    /* Container chnh cho ph%u1EA7n mua hng */
+    .purchase-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    }
+    
+    .purchase-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    visibility: hidden;
+    /* %u1EA8n m v%u1EABn gi%u1EEF khng gian */
+    }
+    
+    .quantity {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    }
+    
+    .currency-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+    }
+    
+    .total {
+    font-size: 16px;
+    color: #333;
+    font-weight: 400;
+    }
+    
+    #currency-price {
+    font-weight: 700;
+    }
+    
+    #currency-amount {
+    color: red;
+    font-weight: 700;
+    }
+    
+    #currency-bonnus {
+    margin-left: 5px;
+    color: green;
+    }
+    
+    .currency-amount {
+    color: #444;
+    }
+    
+    .buy-now-button {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 10px 20px;
+    background-color: #D81A0D;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    }
+    
+    .buy-now-button i {
+    font-size: 16px;
+    }
+    
+    /* Responsive cho mn hnh nh%u1ECF */
+    @media (max-width: 639px) {
+    .purchase-section {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: white;
+        padding: 10px 20px;
+        justify-content: space-between;
+        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+    
+    .purchase-info {
+        align-items: flex-start;
+        order: 1;
+    }
+    
+    .buy-now-button {
+        order: 2;
+    }
+    }
+    
+    
+    /* Container chnh cho ph%u01B0%u01A1ng th%u1EE9c thanh ton */
+    .payment-method {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    }
+    
+    /* Ph%u1EA7n ch%u1ECDn lo%u1EA1i th%u1EBB */
+    .card-selection {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    }
+    
+    /* Ph%u1EA7n danh sch cc lo%u1EA1i th%u1EBB */
+    .list-card {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 10px;
+    /* 3 item trn m%u1ED9t hng */
+    }
+    
+    .card-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    height: 65px;
+    cursor: pointer;
+    }
+    
+    .card-item img {
+    width: 100%;
+    max-width: 80px;
+    }
+    
+    /* Ph%u1EA7n phn cch d%u1ECDc */
+    .ngan {
+    width: 1px;
+    background-color: #ccc;
+    display: none;
+    /* M%u1EB7c %u0111%u1ECBnh %u1EA9n thanh phn cch */
+    }
+    
+    @media (min-width: 640px) {
+    .ngan {
+        display: block;
+        /* Hi%u1EC3n th%u1ECB thanh phn cch khi mn hnh t%u1EEB 640px tr%u1EDF ln */
+        height: auto;
+    }
+    }
+    
+    /* Ph%u1EA7n nh%u1EADp m th%u1EBB v seri */
+    .input-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+    }
+    
+    .code-seri {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    }
+    
+    .input-wrapper {
+    position: relative;
+    width: 100%;
+    }
+    
+    .input-field {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 10px 40px 10px 10px;
+    /* Thm kho%u1EA3ng tr%u1ED1ng cho nt dn */
+    width: 100%;
+    box-sizing: border-box;
+    }
+    
+    .paste-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #d9534f;
+    cursor: pointer;
+    }
+    
+    /* Responsive */
+    @media (min-width: 640px) {
+    
+    .card-selection,
+    .input-section {
+        width: 50%;
+        /* M%u1ED7i ph%u1EA7n chi%u1EBFm 50% %u0111%u1ED9 r%u1ED9ng khi mn hnh t%u1EEB 640px tr%u1EDF ln */
+    }
+    }
+    
+    @media (max-width: 639px) {
+    .payment-method {
+        flex-direction: column;
+        /* %u0110%u1EB7t cc ph%u1EA7n t%u1EED theo chi%u1EC1u d%u1ECDc */
+    }
+    
+    .card-selection,
+    .input-section {
+        width: 100%;
+        /* M%u1ED7i ph%u1EA7n chi%u1EBFm 100% %u0111%u1ED9 r%u1ED9ng khi mn hnh d%u01B0%u1EDBi 640px */
+    }
+    
+    .input-section {
+        margin-top: 0px;
+        /* Thm kho%u1EA3ng cch trn khi %u1EDF mn hnh nh%u1ECF */
+    }
+    }
+    
+    
+    /* Container chnh cho footer */
+    footer {
+    border-top: 1px solid #e0e0e0;
+    /* %u0110%u01B0%u1EDDng k%u1EBB ngang m%u1ECFng pha trn */
+    padding: 20px 0;
+    font-size: 14px;
+    color: #666;
+    margin-top: 50px;
+    }
+    
+    /* B%u1ED1 c%u1EE5c c%u1EE7a footer */
+    .footer-container {
+    display: flex;
+    justify-content: space-between;
+    /* C%u0103n cc ph%u1EA7n t%u1EED ra hai bn */
+    align-items: center;
+    max-width: 999px;
+    margin: 0 auto;
+    padding: 0 20px;
+    }
+    
+    /* Ph%u1EA7n bn tri c%u1EE7a footer */
+    .footer-left {
+    font-size: 14px;
+    color: #666;
+    }
+    
+    /* Ph%u1EA7n bn ph%u1EA3i c%u1EE7a footer */
+    .footer-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* Kho%u1EA3ng cch gi%u1EEFa cc link */
+    }
+    
+    /* %u0110%u1ECBnh d%u1EA1ng lin k%u1EBFt trong footer */
+    .footer-right a {
+    text-decoration: none;
+    color: #666;
+    font-size: 14px;
+    }
+    
+    .footer-right a:hover {
+    color: #333;
+    /* Mu khi hover */
+    }
+    
+    /* %u0110%u01B0%u1EDDng phn cch gi%u1EEFa cc lin k%u1EBFt */
+    .divider {
+    color: #ccc;
+    font-size: 14px;
+    }
+    
+    .game-name.selected {
+    font-weight: bold;
+    color: #d81a0d;
+    }
+    
+    .game-img.selected img {
+    border: 3px solid #d81a0d;
+    /* Vi%u1EC1n mu %u0111%u1ECF pha trong */
+    border-radius: 22px;
+    }
+    
+    
+    
+    .currency-item.selected {
+    border: 1px solid #D81A0D;
+    background-color: #fef7f7;
+    }
+    
+    /* Style cho card-item khi %u0111%u01B0%u1EE3c ch%u1ECDn */
+    .card-item.selected {
+    border: 1px solid #D81A0D;
+    background-color: #fef7f7;
+    }
+    
+    
+    /* Overlay cho popup */
+    .custom-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    }
+    
+    /* N%u1ED9i dung popup */
+    .custom-popup-content {
+    background-color: #fff;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 10px auto;
+    padding-bottom: 10px;
+    }
+    
+    .custom-popup-content-get-uid {
+    background-color: #fff;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 690px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 10px auto;
+    padding-bottom: 10px;
+    }
+    
+    /* Header c%u1EE7a popup v%u1EDBi %u1EA3nh banner */
+    .custom-popup-header {
+    position: relative;
+    }
+    
+    .custom-banner-img {
+    width: 100%;
+    height: auto;
+    }
+    
+    /* Nt %u0111ng popup */
+    .custom-close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    border-radius: 11px;
+    width: 30px;
+    height: 30px;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    
+    /* Ph%u1EA7n n%u1ED9i dung chnh c%u1EE7a popup */
+    .custom-popup-body {
+    padding: 0px 20px 20px 20px;
+    text-align: center;
+    position: relative;
+    }
+    
+    .custom-icon-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 0px;
+    position: relative;
+    z-index: 1;
+    }
+    
+    /* %u0110%u1EB7t icon %u0111 ln banner */
+    .custom-game-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    position: absolute;
+    top: -15px;
+    left: 20px;
+    border: 3px solid white;
+    z-index: 2;
+    }
+    
+    .custom-game-info {
+    text-align: left;
+    margin-left: 95px;
+    }
+    
+    .custom-game-title {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    }
+    
+    .custom-secure-badge {
+    color: #555;
+    font-size: 14px;
+    }
+    
+    .popup-main-content {
+    text-align: left;
+    margin-top: 35px;
+    margin-bottom: 5px;
+    }
+    
+    .popup-main-content .get-uid-img {
+    text-align: center;
+    }
+    
+    .popup-main-content .get-uid-img img {
+    max-width: 100%;
+    }
+    
+    .custom-popup-bottom {
+    border-top: 1px solid #ccc;
+    padding: 15px 20px 10px 20px;
+    display: none;
+    }
+    
+    .showGetUID {
+    color: #0d6efd;
+    cursor: pointer;
+    }
+    
+    #msg-thong-bao strong {
+    color: green;
+    }
+    
+    #msg-thong-bao div {
+    margin-bottom: 5px;
+    }
+    
+    /* Overlay cho popup */
+    .captcha-popup-overlay {
+    display: none;
+    /* Ban %u0111%u1EA7u %u1EA9n */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    /* Mu n%u1EC1n m%u1EDD */
+    z-index: 1000;
+    /* N%u1ED5i trn cc thnh ph%u1EA7n khc */
+    }
+    
+    /* N%u1ED9i dung c%u1EE7a popup */
+    .captcha-popup-content {
+    position: fixed;
+    /* C%u1ED1 %u0111%u1ECBnh v%u1ECB tr */
+    top: 50%;
+    /* Cch top 50% */
+    left: 50%;
+    /* Cch left 50% */
+    transform: translate(-50%, -50%);
+    /* C%u0103n ch%u1EC9nh trung tm */
+    background: #e0f7fa;
+    /* Mu n%u1EC1n xanh d%u01B0%u01A1ng nh%u1EA1t */
+    padding: 20px;
+    /* Kho%u1EA3ng cch bn trong */
+    border-radius: 10px;
+    /* Gc bo trn */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    /* Hi%u1EC7u %u1EE9ng bng */
+    text-align: center;
+    /* C%u0103n gi%u1EEFa n%u1ED9i dung */
+    animation: fadeIn 0.3s ease-in-out;
+    /* Hi%u1EC7u %u1EE9ng m%u1EDD khi hi%u1EC7n */
+    width: 100%;
+    max-width: 400px;
+    /* %u0110%u1EB7t kch th%u01B0%u1EDBc t%u1ED1i %u0111a */
+    border: 2px solid #00acc1;
+    /* %u0110%u01B0%u1EDDng vi%u1EC1n xanh d%u01B0%u01A1ng %u0111%u1EADm */
+    }
+    
+    .captcha-popup-content .info {
+    font-style: italic;
+    }
+    
+    /* Tiu %u0111%u1EC1 c%u1EE7a popup */
+    .captcha-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #00796b;
+    /* Mu xanh d%u01B0%u01A1ng %u0111%u1EADm */
+    margin-bottom: 20px;
+    /* Kho%u1EA3ng cch gi%u1EEFa tiu %u0111%u1EC1 v reCAPTCHA */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+    
+    /* Icon shield check */
+    .captcha-title i {
+    margin-right: 10px;
+    /* Kho%u1EA3ng cch gi%u1EEFa icon v ch%u1EEF */
+    color: #004d40;
+    /* Mu xanh %u0111%u1EADm */
+    font-size: 24px;
+    }
+    
+    /* C%u0103n gi%u1EEFa reCAPTCHA */
+    .g-recaptcha {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    
+    /* Hi%u1EC7u %u1EE9ng fade-in */
+    @keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+        /* L%u1EC7ch tr%u01B0%u1EDBc khi hi%u1EC7n */
+    }
+    
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+        /* Quay v%u1EC1 %u0111ng gi%u1EEFa */
+    }
+    }
