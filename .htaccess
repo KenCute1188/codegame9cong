@@ -1,0 +1,8 @@
+RewriteEngine On
+RewriteBase /
+
+RewriteRule ^login$ login.php [L]
+RewriteRule ^logout$ logout.php [L]
+RewriteRule ^napthe$ napthe.php [L]
+RewriteCond %{QUERY_STRING} ^game=([a-zA-Z0-9_-]+)$
+RewriteRule ^$ %1.php [L]
